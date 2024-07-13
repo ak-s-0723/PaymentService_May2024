@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class StripeWebhookController {
 
     @PostMapping
-    public void respondToEvent(@RequestBody Event event) {
+    public void respondToEvent(@RequestBody String event) {
+        System.out.println("hello");
         System.out.println(event);
     }
 }
