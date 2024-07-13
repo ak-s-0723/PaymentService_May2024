@@ -5,10 +5,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PaymentGatewayChooserStrategy {
+//    @Autowired
+//    private RazorpayPaymentGateway razorpayPaymentGateway;
+
     @Autowired
-    private RazorpayPaymentGateway razorpayPaymentGateway;
+    private StripePaymentGateway stripePaymentGateway;
 
     public PaymentGateway getPaymentGateway() {
-        return razorpayPaymentGateway;
+        return stripePaymentGateway;
     }
 }
